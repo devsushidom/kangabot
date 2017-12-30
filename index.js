@@ -29,11 +29,8 @@ client.on('message', message => {
     if (!warnings[message.author.id]) warnings[message.author.id] = {
         warnings: 0,
     };
-    if(message.guild.channels.find("name", "kangarouxm")) {
-        return;   
-    }
 
-    if(!message.member.roles.find("name", "kangarouxler") && message.content !== "kangaroux" && message.content !== warnings.variant && message.guild.channels.find("name", "kangaroux")){        message.delete();
+    if(!message.member.roles.find("name", "kangarouxler") && message.content !== "kangaroux" && message.content !== warnings.variant && message.channel.id == 335043541833351170)){        message.delete();
         warnings[message.author.id].warnings++;
         console.log(warnings[message.author.id].warnings);
         if(warnings[message.member.id].warnings < 3) {
