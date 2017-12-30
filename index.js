@@ -29,6 +29,9 @@ client.on('message', message => {
     if (!warnings[message.author.id]) warnings[message.author.id] = {
         warnings: 0,
     };
+    if(message.guild.channels.find("name", "kangarouxm")( {
+        return;   
+    }
 
     if(!message.member.roles.find("name", "kangarouxler") && message.content !== "kangaroux" && message.content !== warnings.variant && message.guild.channels.find("name", "kangaroux")){        message.delete();
         warnings[message.author.id].warnings++;
