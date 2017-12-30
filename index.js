@@ -30,7 +30,7 @@ client.on('message', message => {
         warnings: 0,
     };
 
-    if(!message.member.roles.find("name", "kangarouxler") && message.content !== "kangaroux" && message.content !== warnings.variant){        message.delete();
+    if(!message.member.roles.find("name", "kangarouxler") && message.content !== "kangaroux" && message.content !== warnings.variant && message.guild.channels.find("name", "kangaroux")){        message.delete();
         warnings[message.author.id].warnings++;
         console.log(warnings[message.author.id].warnings);
         if(warnings[message.member.id].warnings < 3) {
