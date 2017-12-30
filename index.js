@@ -29,7 +29,7 @@ client.on('message', message => {
     if (!warnings[message.author.id]) warnings[message.author.id] = {
         warnings: 0,
     };
-    if(message.guild.channels.find("name", "kangarouxm")( {
+    if(message.guild.channels.find("name", "kangarouxm") {
         return;   
     }
 
